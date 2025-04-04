@@ -13,7 +13,7 @@ void showTheGrid() {
     printf("---|---|---\n");
     printf(" %c | %c | %c\n", sacredTable[3], sacredTable[4], sacredTable[5]);
     printf("---|---|---\n");
-    printf(" %c | %c | %c\n", sacredTable[6], sacredTable[7], sacredTable[8]);
+    printf(" %c | %c | %c\n", sacredTable[6], sacredTable[7], sacredTable[8])
     printf("The fate of these symbols is in your hands...\n");
 }
 
@@ -25,7 +25,7 @@ int consultTheOracles() {
     if (sacredTable[1] == sacredTable[4] && sacredTable[4] == sacredTable[7]) return 1;
     if (sacredTable[2] == sacredTable[5] && sacredTable[5] == sacredTable[8]) return 1;
     if (sacredTable[0] == sacredTable[4] && sacredTable[4] == sacredTable[8]) return 1;
-    if (sacredTable[2] == sacredTable[4] && sacredTable[4] == sacredTable[6]) return 1;
+    if (sacredTable[2] == sacredTable[4] && sacredTable[4] == sacredTable[2]) return 1;
     return 0;
 }
 

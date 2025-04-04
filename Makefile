@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -std=c11 -Wall -Wextra -O2
 
 TARGET = TicTacToe
-SRCDIR = src
+SRCDIR = srco
 SRC = $(wildcard $(SRCDIR)/*.c)
 OBJ = $(SRC:.c=.o)
 
