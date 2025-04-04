@@ -1,20 +1,18 @@
-# Makefile for TicTacToe project with source files in src/
-
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -O2
+CC = gcc
+CFLAGS = -std=c11 -Wall -Wextra -O2
 
 TARGET = TicTacToe
 SRCDIR = src
-SRC = $(wildcard $(SRCDIR)/*.cpp)
-OBJ = $(SRC:.cpp=.o)
+SRC = $(wildcard $(SRCDIR)/*.c)
+OBJ = $(SRC:.c=.o)
 
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
-$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+$(SRCDIR)/%.o: $(SRCDIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(SRCDIR)/*.o $(TARGET)
